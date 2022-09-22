@@ -14,7 +14,7 @@ const registerOtp = expressAsyncHandler(async (req: any, res) => {
         throw new Error("Please add all fields");
     }
 
-    const user = await User.findById(userId, {otp}, {new: true});
+    const user = await User.findByIdAndUpdate(userId, {otp}, {new: true});
 
     if (user) {
         res.status(200);
