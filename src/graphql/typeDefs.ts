@@ -8,7 +8,7 @@ export const typeDefs = gql`
     
     input LoginUserInput {
         email: String!
-        otp: Int!
+        otp: String!
     }
     
     type UserOutput {

@@ -8,6 +8,6 @@ export type RegisterUserInput = {
 export type LoginUserInput = {
     input: {
         email: string;
-        otp: number;
+        otp: string;
     }
 }
