@@ -3,6 +3,11 @@ import {User} from "../schema/UserSchema";
 import {ApolloError} from "apollo-server-core";
 
 export const resolvers = {
+    Query: {
+        users: () => {
+            return "Hello"
+        }
+    },
     Mutation: {
         registerUser: async (_:any, {input: {name, email}}: RegisterUserInput) => {
             const user = await User.create({
